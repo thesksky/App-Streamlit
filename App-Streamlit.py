@@ -24,11 +24,11 @@ api_key = os.getenv("API_KEY")
 # App-Streamlit.py
 
 # Title of the app
-st.title("Cats API Scraper, limited use, only accessing facts")
+st.header("https://thecatapi.com/ Scraper, limited use, only accessing facts endpoint")
 
 # Section for API interaction
-st.header("Get Random Cat Facts")
-num_facts = st.slider("Number of facts to fetch", min_value=1, max_value=20, value=5, key="facts_slider_1")
+st.subheader("Get Random Cat Facts")
+num_facts = st.slider("Number of facts to fetch", min_value=1, max_value=10, value=5, key="facts_slider_1")
 
 # Fetch data from the CatsAPI
 if st.button("Fetch Cat Facts"):
@@ -73,11 +73,11 @@ headers = {
 }
 
 # Title of the app
-st.title("Cats API Scraper with using my api_key")
+st.header("https://thecatapi.com/ Scraper with using my api_key")
 
 # Section for API interaction
-st.header("Get Random Cat Images")
-num_images = st.slider("Number of images to fetch", min_value=1, max_value=20, value=5, key="image_slider")
+st.subheader("Get Random Cat Images")
+num_images = st.slider("Number of images to fetch", min_value=1, max_value=10, value=5, key="image_slider")
 
 # Fetch data from the CatsAPI
 if st.button("Fetch Cat Images"):
