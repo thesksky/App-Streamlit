@@ -55,11 +55,14 @@ if st.button("Fetch Cat Facts"):
 # In[3]:
 
 
-# Get API key from environment variable
-api_key = os.getenv("CAT_API_KEY")  # Replace "CAT_API_KEY" with the key name in your .env or deployment settings
+# Get API key from environment variable if run locally
+# api_key = os.getenv("CAT_API_KEY")  # Replace "CAT_API_KEY" with the key name in your .env or deployment settings
+
+# Get API key from Streamlit Cloud secrets if deployd on Streamlit
+api_key = st.secrets["CAT_API_KEY"]
 
 if not api_key:
-    st.error("API Key not found. Please set 'CAT_API_KEY' as an environment variable.")
+    st.error("API Key not found.")
 
 # Endpoint for cat images
 url = "https://api.thecatapi.com/v1/images/search"
