@@ -24,7 +24,7 @@ api_key = os.getenv("API_KEY")
 # App-Streamlit.py
 
 # Title of the app
-st.title("Cats API Scraper without key, limited use, only accessing facts")
+st.title("Cats API Scraper, limited use, only accessing facts")
 
 # Section for API interaction
 st.header("Get Random Cat Facts")
@@ -73,7 +73,7 @@ headers = {
 }
 
 # Title of the app
-st.title("Cats API Scraper with key")
+st.title("Cats API Scraper with using my api_key")
 
 # Section for API interaction
 st.header("Get Random Cat Images")
